@@ -1,7 +1,5 @@
 "use client"
 
-import type { TooltipProps } from "recharts"
-
 import * as React from "react"
 import * as RechartsPrimitive from "recharts"
 
@@ -120,7 +118,7 @@ function ChartTooltipContent({
   color,
   nameKey,
   labelKey,
-}: TooltipProps<any, any> &
+}: React.ComponentProps<typeof RechartsPrimitive.Tooltip> &
   React.ComponentProps<"div"> & {
     hideLabel?: boolean
     hideIndicator?: boolean
@@ -128,7 +126,6 @@ function ChartTooltipContent({
     nameKey?: string
     labelKey?: string
   }) {
-
   const { config } = useChart()
 
   const tooltipLabel = React.useMemo(() => {

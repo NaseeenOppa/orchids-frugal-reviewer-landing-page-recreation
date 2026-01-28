@@ -38,14 +38,13 @@ export default function NotificationToast() {
   const currentClaim = claimsData[claimIndex];
 
   return (
-    <div className="fixed top-4 left-1/2 -translate-x-1/2 z-[100] w-full max-w-xs flex justify-center pointer-events-none">
+    <div className="fixed top-14 left-1/2 -translate-x-1/2 z-[100] w-full max-w-[340px] px-4 flex justify-center pointer-events-none">
       <div
-        className={`bg-white rounded-full px-5 py-2.5 shadow-[0_4px_12px_rgba(0,0,0,0.1)] flex items-center gap-2 transition-all duration-500 ease-out border border-[rgba(15,23,42,0.05)] pointer-events-auto ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+        className={`bg-white/95 backdrop-blur-md rounded-full px-5 py-3 shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center gap-3 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] border border-white/20 pointer-events-auto ${
+          isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 -translate-y-4 scale-95"
         }`}
         style={{
-          height: "40px",
-          backgroundColor: "#FFFFFF"
+          height: "48px",
         }}
       >
         <Sparkles 
