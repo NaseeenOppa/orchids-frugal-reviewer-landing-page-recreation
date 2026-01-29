@@ -20,64 +20,65 @@ export default function RewardCard() {
   const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 
   return (
-    <div className="min-h-screen bg-[#F2F4F8] flex flex-col items-center justify-center px-4 py-8 sm:py-12 font-sans antialiased text-[#263140] safe-top safe-bottom">
+    <div className="min-h-screen bg-[#F2F4F8] flex flex-col items-center justify-center px-4 py-8 font-sans antialiased text-[#263140]">
       <NotificationToast />
 
-      <div className="w-full max-w-[380px] bg-white rounded-[40px] shadow-[0_12px_60px_-15px_rgba(0,0,0,0.2)] border border-[#0F172A]/5 overflow-hidden transition-all duration-300">
-        <div className="w-full bg-white flex items-center justify-center pt-10 pb-4 px-6">
-            <Image 
-              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/85fd72e3-8a04-40a8-a355-77cd6ec71c84/costco-logo-DKVkkWvk-1-1-1769597835852.webp?width=8000&height=8000&resize=contain" 
-              alt="Costco Wholesale" 
-              width={168} 
-              height={112} 
-              className="h-28 w-auto object-contain"
-              priority
-            />
+      <div className="w-full max-w-[320px] bg-white rounded-[32px] shadow-[0_8px_40px_-8px_rgba(0,0,0,0.3)] border border-[#0F172A]/10 overflow-hidden">
+        <div className="w-full bg-white flex items-center justify-center pt-8 pb-2 px-4">
+                <Image 
+                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/85fd72e3-8a04-40a8-a355-77cd6ec71c84/costco-logo-DKVkkWvk-1-1769676927619.png?width=8000&height=8000&resize=contain" 
+                  alt="Costco Wholesale" 
+                  width={168} 
+                  height={112} 
+                  className="h-28 w-auto object-contain"
+                  priority
+                  unoptimized
+                />
         </div>
 
-        <div className="text-center px-6 pb-6">
-          <h1 className="text-[44px] sm:text-[48px] font-bold text-[#005DAA] mb-1 leading-none tracking-tight">
+        <div className="text-center px-4 pb-4">
+          <h1 className="text-[36px] font-bold text-[#005DAA] mb-1 leading-none tracking-tight">
             $750
           </h1>
-          <p className="text-[#65758B] font-semibold tracking-widest uppercase text-[14px]">
+          <p className="text-[#65758B] font-semibold tracking-widest uppercase text-[12px]">
             Costco Gift Card
           </p>
         </div>
 
-        <div className="px-6 mb-4">
-          <div className="flex items-center justify-center gap-2 bg-[#EF4444]/8 text-[#EF4444] px-4 py-2 rounded-[20px] border border-[#EF4444]/10">
-            <Clock size={16} className="w-4 h-4" />
-            <span className="text-[14px] font-bold">Offer expires in {formattedTime}</span>
+        <div className="px-4 mb-3">
+          <div className="flex items-center justify-center gap-2 bg-[#EF4444]/10 text-[#EF4444] px-3 py-1.5 rounded-[16px]">
+            <Clock size={14} className="w-3.5 h-3.5" />
+            <span className="text-[12px] font-bold">Offer expires in {formattedTime}</span>
           </div>
         </div>
 
-        <div className="mx-6 mb-6 bg-[#F8FAFC] rounded-[32px] p-6 border border-[#0F172A]/5">
-          <div className="space-y-4">
+        <div className="mx-4 mb-4 bg-[#E4EAF1]/50 rounded-[24px] p-4">
+          <div className="space-y-3">
             {[
-              "Click The Button Below",
-              "Enter Your Basic Info",
+              "Click the Button Below",
+              "Enter your Basic Info",
               "Complete 4-5 Offers",
-              "Claim Your Reward"
+              "Claim your Reward"
             ].map((text, index) => (
-              <div key={index} className="flex items-center gap-4">
-                <div className="w-8 h-8 rounded-full bg-[#005DAA] flex items-center justify-center flex-shrink-0 shadow-sm">
-                  <span className="text-white font-bold text-[14px]">{index + 1}</span>
+              <div key={index} className="flex items-center gap-3">
+                <div className="w-6 h-6 rounded-full bg-[#005DAA] flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-semibold text-[12px]">{index + 1}</span>
                 </div>
-                <span className="text-[#0F172A] font-semibold text-[15px]">{text}</span>
+                <span className="text-[#0F172A] font-medium text-[14px]">{text}</span>
               </div>
             ))}
           </div>
         </div>
 
-          <div className="px-6 pb-8">
+          <div className="px-4 pb-6">
             <a 
               href="https://trkfy.org/aff_c?offer_id=941&aff_id=95618"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex w-full items-center justify-center gap-3 rounded-2xl bg-[#005DAA] py-5 px-6 text-[16px] font-bold text-white transition-all hover:bg-[#005DAA]/90 focus:outline-none focus:ring-4 focus:ring-[#005DAA]/20 active:scale-[0.97] shadow-lg shadow-[#005DAA]/20"
+              className="group relative flex w-full items-center justify-center gap-2 rounded-lg bg-[#005DAA] py-4 px-4 text-[14px] font-bold text-white transition-all hover:bg-[#005DAA]/90 focus:outline-none focus:ring-2 focus:ring-[#005DAA] focus:ring-offset-2 active:scale-[0.98]"
             >
               CLAIM YOUR GIFT CARD
-              <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+              <ArrowRight size={16} className="ml-1 transition-transform group-hover:translate-x-1" />
             </a>
           </div>
       </div>
