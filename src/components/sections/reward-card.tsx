@@ -37,7 +37,7 @@ export default function RewardCard() {
         </div>
 
         <div className="text-center px-4 pb-4">
-          <h1 className="text-[36px] font-bold text-[#000000] mb-1 leading-none tracking-tight">
+          <h1 className="text-[36px] font-bold text-[#212121] mb-1 leading-none tracking-tight">
             $750
           </h1>
           <p className="text-[#65758B] font-semibold tracking-widest uppercase text-[12px]">
