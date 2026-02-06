@@ -6,7 +6,7 @@ import { Clock, ArrowRight } from 'lucide-react';
 import NotificationToast from './notification-toast';
 
 export default function RewardCard() {
-  const [timeLeft, setTimeLeft] = useState(15 * 60);
+  const [timeLeft, setTimeLeft] = useState(5 * 60);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -37,12 +37,12 @@ export default function RewardCard() {
         </div>
 
         <div className="text-center px-4 pb-4">
-          <h1 className="text-[36px] font-bold text-[#212121] mb-1 leading-none tracking-tight">
-            $750
-          </h1>
-          <p className="text-[#65758B] font-semibold tracking-widest uppercase text-[12px]">
-            Costco Gift Card
-          </p>
+            <h1 className="text-[36px] font-bold text-[#000000] mb-1 leading-none tracking-tight">
+              $750
+            </h1>
+            <p className="text-[#000000] font-semibold tracking-widest uppercase text-[12px]">
+              Costco Product Reviewer
+            </p>
         </div>
 
         <div className="px-4 mb-3">
@@ -77,7 +77,7 @@ export default function RewardCard() {
               rel="noopener noreferrer"
               className="group relative flex w-full items-center justify-center gap-2 rounded-lg bg-[#005DAA] py-4 px-4 text-[14px] font-bold text-white transition-all hover:bg-[#005DAA]/90 focus:outline-none focus:ring-2 focus:ring-[#005DAA] focus:ring-offset-2 active:scale-[0.98]"
             >
-              BECOME A REVIEWER
+              START REVIEW NOW
               <ArrowRight size={16} className="ml-1 transition-transform group-hover:translate-x-1" />
             </a>
           </div>
