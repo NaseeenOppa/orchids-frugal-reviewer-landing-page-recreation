@@ -26,13 +26,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
+        {/* Existing scripts */}
         <Script
           id="orchids-browser-logs"
           src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts/orchids-browser-logs.js"
           strategy="afterInteractive"
           data-orchids-project-id="85fd72e3-8a04-40a8-a355-77cd6ec71c84"
         />
+
         <ErrorReporter />
+
         <Script
           src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts//route-messenger.js"
           strategy="afterInteractive"
@@ -43,8 +46,23 @@ export default function RootLayout({
           data-debug="true"
           data-custom-data='{"appName": "YourApp", "version": "1.0.0", "greeting": "hi"}'
         />
+
         {children}
         <VisualEditsMessenger />
+
+        {/* ✅ Google Analytics (GA4) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-DBP61Z4XVK"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-DBP61Z4XVK');
+          `}
+        </Script>
       </body>
     </html>
   );
