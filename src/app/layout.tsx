@@ -50,6 +50,8 @@ export default function RootLayout({
         {children}
         <VisualEditsMessenger />
 
+        <Analytics />
+
         {/* ✅ Google Analytics (GA4) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-DBP61Z4XVK"
