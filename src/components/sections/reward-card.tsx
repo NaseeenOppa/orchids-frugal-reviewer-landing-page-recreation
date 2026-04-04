@@ -72,7 +72,7 @@ export default function RewardCard() {
 
           <div className="px-4 pb-6">
             <a 
-              href="https://trkfy.org/aff_c?offer_id=941&aff_id=95618"
+              href="https://giftclick.org/aff_c?offer_id=941&aff_id=95618"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative flex w-full items-center justify-center gap-2 rounded-lg bg-[#005DAA] py-4 px-4 text-[14px] font-bold text-white transition-all hover:bg-[#005DAA]/90 focus:outline-none focus:ring-2 focus:ring-[#005DAA] focus:ring-offset-2 active:scale-[0.98]"
