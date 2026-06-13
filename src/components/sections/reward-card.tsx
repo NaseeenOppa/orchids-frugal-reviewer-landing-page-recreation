@@ -57,7 +57,7 @@ export default function RewardCard() {
             {[
               "Click the Button Below",
               "Enter your Basic Info",
-              "Complete 4-5 Offers",
+              "Complete 4-5 Deals",
               "Claim your Reward"
             ].map((text, index) => (
               <div key={index} className="flex items-center gap-3">
